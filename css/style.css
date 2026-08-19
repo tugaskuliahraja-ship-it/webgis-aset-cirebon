@@ -2144,7 +2144,7 @@ body {
 
 .informasi-panel {
     height: 100%;
-    padding: 32px 42px 28px;
+    padding: 38px 44px 32px;
     box-sizing: border-box;
     overflow: hidden;
     background: #fff;
@@ -2160,11 +2160,11 @@ body {
     margin:
         0
         0
-        10px;
+        12px;
 
     color: #0B5C97;
 
-    font-size: 19px;
+    font-size: 23px;
 
     font-weight: 700;
 
@@ -2180,8 +2180,8 @@ body {
     margin: 0;
 
     padding:
-        14px
-        18px;
+        17px
+        20px;
 
     background:
         #f4f8fb;
@@ -2197,9 +2197,9 @@ body {
 
     color: #4f5f6b;
 
-    font-size: 12px;
+    font-size: 14px;
 
-    line-height: 1.65;
+    line-height: 1.7;
 
     text-align: justify;
 
@@ -2218,7 +2218,7 @@ body {
     height: 1px;
 
     margin:
-        18px
+        20px
         0;
 
     background: #dce4e9;
@@ -2231,8 +2231,8 @@ body {
 
 .informasi-developer {
     padding:
-        14px
-        18px;
+        17px
+        20px;
 
     background:
         #f4f8fb;
@@ -2257,11 +2257,11 @@ body {
 
     color: #4f5f6b;
 
-    font-size: 12px;
+    font-size: 14px;
 
     font-weight: 400;
 
-    line-height: 1.6;
+    line-height: 1.7;
 }
 
 
@@ -2280,9 +2280,9 @@ body {
 
     color: #4f5f6b;
 
-    font-size: 12px;
+    font-size: 14px;
 
-    line-height: 1.6;
+    line-height: 1.7;
 
     text-align: left;
 }
@@ -2295,9 +2295,9 @@ body {
 
     color: #4f5f6b;
 
-    font-size: 12px;
+    font-size: 14px;
 
-    line-height: 1.6;
+    line-height: 1.7;
 }
 
 
