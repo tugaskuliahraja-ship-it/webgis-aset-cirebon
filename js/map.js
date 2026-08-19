@@ -3266,8 +3266,8 @@ if (
 }
 
 if (
-    window.innerWidth <= 700 &&
-    filterPanel
+    filterPanel &&
+    toggleFilterPanel
 ) {
 
     filterPanel.classList.add(
@@ -3276,4 +3276,35 @@ if (
 
     toggleFilterPanel.textContent =
         'Filter';
+}
+
+// ======================================================
+// IZINKAN SCROLL DI LEGENDA PADA MOBILE
+// ======================================================
+
+const legendAset =
+    document.querySelector(
+        '.legend-aset'
+    );
+
+if (legendAset) {
+
+    L.DomEvent.disableScrollPropagation(
+        legendAset
+    );
+
+    L.DomEvent.disableClickPropagation(
+        legendAset
+    );
+
+    legendAset.addEventListener(
+        'touchmove',
+        function(event) {
+            event.stopPropagation();
+        },
+        {
+            passive: true
+        }
+    );
+
 }
