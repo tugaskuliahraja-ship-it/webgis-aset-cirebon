@@ -3195,18 +3195,20 @@ body {
 
 }
 /* ======================================================
-   TOGGLE FILTER PETA
+   FINAL FILTER TOGGLE + PANEL
+   DESKTOP + MOBILE
 ====================================================== */
 
+/* Tombol buka / tutup filter */
 .filter-toggle-btn {
     position: fixed;
 
     top: 80px;
-    left: 53px;
+    left: 62px;
 
-    z-index: 1900;
+    z-index: 2001;
 
-    padding: 8px 11px;
+    padding: 8px 12px;
 
     border: none;
     border-radius: 7px;
@@ -3215,27 +3217,209 @@ body {
     color: #ffffff;
 
     font-family: Arial, Helvetica, sans-serif;
-
-    font-size: 9px;
+    font-size: 10px;
     font-weight: 700;
 
     cursor: pointer;
 
-    box-shadow:
-        0 2px 7px
-        rgba(0, 0, 0, 0.20);
+    box-shadow: 0 2px 7px rgba(0,0,0,.20);
 }
-
 
 .filter-toggle-btn:hover {
     background: #084773;
 }
 
 
-/* Panel ketika disembunyikan */
+/* Panel filter */
+.filter-panel {
+    position: fixed;
 
+    top: 124px;
+    left: 20px;
+
+    width: 300px;
+
+    padding: 14px;
+
+    z-index: 2000;
+
+    box-sizing: border-box;
+
+    border-radius: 12px;
+
+    background: rgba(255,255,255,.96);
+
+    box-shadow:
+        0 3px 12px
+        rgba(0,0,0,.18);
+}
+
+
+/* Judul */
+.filter-title {
+    margin:
+        0
+        0
+        10px;
+
+    padding-bottom: 8px;
+
+    border-bottom: 1px solid #d5dde3;
+
+    color: #0B5C97;
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+
+/* Search */
+.search-aset {
+    display: flex;
+
+    gap: 6px;
+
+    width: 100%;
+
+    margin-bottom: 10px;
+}
+
+.search-aset input {
+    flex: 1;
+
+    min-width: 0;
+
+    padding: 8px 10px;
+
+    border: 1px solid #c7d3dc;
+    border-radius: 7px;
+
+    box-sizing: border-box;
+
+    font-size: 10px;
+}
+
+.search-aset button {
+    padding: 8px 12px;
+
+    border: none;
+    border-radius: 7px;
+
+    background: #0B5C97;
+    color: #ffffff;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+
+/* Label */
+.filter-panel label {
+    display: block;
+
+    margin:
+        8px
+        0
+        4px;
+
+    color: #3f4b55;
+
+    font-size: 10px;
+    font-weight: 600;
+}
+
+
+/* Dropdown */
+.filter-panel select {
+    width: 100%;
+
+    padding: 8px 10px;
+
+    border: 1px solid #c7d3dc;
+    border-radius: 7px;
+
+    background: #ffffff;
+
+    box-sizing: border-box;
+
+    font-size: 10px;
+}
+
+
+/* Reset */
+#resetFilter {
+    width: 100%;
+
+    margin-top: 10px;
+
+    padding: 8px;
+
+    border: none;
+    border-radius: 7px;
+
+    background: #0B5C97;
+    color: #ffffff;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+
+/* Ringkasan */
+.statistik-filter {
+    margin-top: 12px;
+
+    padding: 10px 12px;
+
+    border: 1px solid #d6e0e7;
+    border-radius: 9px;
+
+    background: rgba(255,255,255,.92);
+}
+
+.statistik-title {
+    margin-bottom: 7px;
+
+    padding-bottom: 6px;
+
+    border-bottom: 1px solid #d5dde3;
+
+    color: #0B5C97;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.statistik-row {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 12px;
+
+    margin-top: 6px;
+
+    color: #46535d;
+
+    font-size: 9px;
+}
+
+.statistik-row span:last-child {
+    color: #0B5C97;
+
+    font-weight: 700;
+
+    text-align: right;
+}
+
+
+/* Panel disembunyikan */
 .filter-panel.filter-hidden {
-    display: none;
+    display: none !important;
 }
 
 
@@ -3246,12 +3430,83 @@ body {
 @media (max-width: 700px) {
 
     .filter-toggle-btn {
-        top: 77px;
-        left: 52px;
+        top: 76px;
+        left: 58px;
 
-        padding: 7px 10px;
+        padding: 7px 11px;
 
-        font-size: 8px;
+        font-size: 9px;
     }
 
+
+    .filter-panel {
+        top: 116px;
+        left: 10px;
+
+        width: 263px;
+
+        max-width:
+            calc(100vw - 20px);
+
+        padding: 12px;
+
+        border-radius: 11px;
+    }
+
+
+    .filter-title {
+        font-size: 12px;
+    }
+
+
+    .search-aset input,
+    .search-aset button,
+    .filter-panel select,
+    #resetFilter {
+        font-size: 9px;
+    }
+
+
+    .filter-panel label {
+        font-size: 9px;
+    }
+
+
+    .statistik-title {
+        font-size: 10px;
+    }
+
+
+    .statistik-row {
+        font-size: 8.5px;
+    }
+}
+
+@media (max-width: 700px) {
+
+    .legend-aset {
+        width: 132px;
+
+        max-height: 190px !important;
+
+        overflow-y: auto !important;
+        overflow-x: hidden !important;
+
+        -webkit-overflow-scrolling: touch;
+
+        touch-action: pan-y;
+
+        overscroll-behavior: contain;
+
+        box-sizing: border-box;
+    }
+
+    .legend-aset::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    .legend-aset::-webkit-scrollbar-thumb {
+        background: rgba(0, 0, 0, 0.35);
+        border-radius: 10px;
+    }
 }
