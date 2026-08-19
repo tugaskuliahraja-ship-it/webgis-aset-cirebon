@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        WebGIS Aset Pemda Kabupaten Cirebon
+    </title>
+
+
+    <!-- Leaflet CSS -->
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    >
+
+
+    <!-- CSS WebGIS -->
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         HEADER WEBGIS
+    ====================================================== -->
+
+    <header class="webgis-header">
+
+        <!-- Bagian identitas -->
+        <div class="header-brand">
+
+            <img
+                src="images/Logo Kabupaten Cirebon.gif"
+                alt="Logo Kabupaten Cirebon"
+                class="header-logo"
+            >
+
+            <div class="header-text">
+
+                <div class="header-title">
+                    WebGIS Aset Pemda
+                </div>
+
+                <div class="header-subtitle">
+                    Kabupaten Cirebon
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Navigasi -->
+        <nav class="header-nav">
+
+    <a
+    href="index.html"
+    class="nav-item"
+>
+    Beranda
+</a>
+
+    <a
+        href="peta.html"
+        class="nav-item active"
+    >
+        Peta
+    </a>
+
+    <a
+        href="data-aset.html"
+        class="nav-item"
+    >
+        Data Aset
+    </a>
+
+    <a
+        href="informasi.html"
+        class="nav-item"
+    >
+        Informasi
+    </a>
+
+</nav>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         FILTER ASET
+    ====================================================== -->
+<button
+    id="toggleFilterPanel"
+    type="button"
+    class="filter-toggle-btn"
+    title="Tampilkan / Sembunyikan Filter"
+>
+    Filter
+</button>
+    <div class="filter-panel">
+
+        <div class="filter-title">
+            Filter Aset
+        </div>
+
+
+        <!-- Search -->
+        <div class="search-aset">
+
+            <input
+                type="text"
+                id="searchAset"
+                placeholder="Cari aset..."
+                autocomplete="off"
+            >
+
+            <button id="btnSearchAset">
+                Cari
+            </button>
+
+        </div>
+
+
+        <!-- Hasil pencarian -->
+        <div
+            id="hasilPencarian"
+            class="hasil-pencarian"
+        ></div>
+
+
+        <!-- Kecamatan -->
+        <label for="filterKecamatan">
+            Kecamatan
+        </label>
+
+        <select id="filterKecamatan">
+
+            <option value="">
+                Semua Kecamatan
+            </option>
+
+        </select>
+
+
+        <!-- Desa -->
+        <label for="filterDesa">
+            Desa
+        </label>
+
+        <select id="filterDesa">
+
+            <option value="">
+                Semua Desa
+            </option>
+
+        </select>
+
+
+        <!-- Penggunaan -->
+        <label for="filterPenggunaan">
+            Penggunaan
+        </label>
+
+        <select id="filterPenggunaan">
+
+            <option value="">
+                Semua Penggunaan
+            </option>
+
+        </select>
+
+        <label for="filterStatus">
+    Status
+</label>
+
+<select id="filterStatus">
+
+    <option value="">
+        Semua Status
+    </option>
+
+</select>
+
+
+        <!-- Reset -->
+        <button id="resetFilter">
+            Reset Filter
+        </button>
+        <div class="statistik-filter">
+
+    <div class="statistik-title">
+        Ringkasan
+    </div>
+
+    <div class="statistik-row">
+        <span>Aset Ditampilkan</span>
+        <strong id="jumlahAset">0</strong>
+    </div>
+
+    <div class="statistik-row">
+        <span>Total Luas</span>
+        <strong id="totalLuas">0 m²</strong>
+    </div>
+
+</div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         PETA
+    ====================================================== -->
+
+    <div id="map"></div>
+
+<!-- =====================================================
+     TOOL PETA
+====================================================== -->
+
+<div class="map-tools">
+
+    <button
+    id="btnUkurJarak"
+    type="button"
+    class="map-tool-btn"
+    title="Ukur Jarak"
+>
+    <span class="icon-penggaris">📏</span>
+</button>
+
+    <button
+    id="btnHapusJarak"
+    type="button"
+    class="map-tool-btn map-tool-secondary"
+    style="display: none;"
+    title="Hapus Pengukuran"
+>
+    ×
+</button>
+
+</div>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <!-- Leaflet -->
+    <script
+        src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    ></script>
+
+
+    <!-- WebGIS -->
+    <script src="js/map.js"></script>
+
+
+</body>
+
+</html>

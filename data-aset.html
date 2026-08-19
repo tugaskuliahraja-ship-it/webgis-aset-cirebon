@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Data Aset - WebGIS Aset Pemda Kabupaten Cirebon
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+</head>
+
+<body>
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header class="webgis-header">
+
+        <div class="header-brand">
+
+            <img
+                src="images/Logo Kabupaten Cirebon.gif"
+                alt="Logo Kabupaten Cirebon"
+                class="header-logo"
+            >
+
+            <div class="header-text">
+
+                <div class="header-title">
+                    WebGIS Aset Pemda
+                </div>
+
+                <div class="header-subtitle">
+                    Kabupaten Cirebon
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <nav class="header-nav">
+
+            <a
+    href="index.html"
+    class="nav-item"
+>
+    Beranda
+</a>
+
+            <a
+                href="peta.html"
+                class="nav-item"
+            >
+                Peta
+            </a>
+
+            <a
+                href="data-aset.html"
+                class="nav-item active"
+            >
+                Data Aset
+            </a>
+
+            <a
+        href="informasi.html"
+        class="nav-item"
+    >
+        Informasi
+    </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =====================================================
+         HALAMAN DATA ASET
+    ====================================================== -->
+
+    <main class="data-aset-page">
+
+        <section class="data-aset-header">
+
+            <div>
+
+                <h1>
+                    Data Aset
+                </h1>
+
+                <p>
+                    Daftar aset Pemerintah Kabupaten Cirebon
+                    yang tersedia dalam sistem WebGIS.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             TOOLBAR
+        ================================================== -->
+
+        <section class="data-aset-toolbar">
+
+    <div class="data-search">
+
+        <input
+            type="text"
+            id="searchDataAset"
+            placeholder="Cari data aset..."
+            autocomplete="off"
+        >
+
+    </div>
+
+
+    <div class="data-filter-group">
+
+        <select id="filterDataKecamatan">
+
+            <option value="">
+                Semua Kecamatan
+            </option>
+
+        </select>
+
+
+        <select id="filterDataDesa">
+
+            <option value="">
+                Semua Desa
+            </option>
+
+        </select>
+
+
+        <select id="filterDataPenggunaan">
+
+            <option value="">
+                Semua Penggunaan
+            </option>
+
+        </select>
+        <select id="filterDataStatus">
+
+    <option value="">
+        Semua Status
+    </option>
+
+</select>
+
+
+        <button
+            id="resetDataFilter"
+            type="button"
+        >
+            Reset
+        </button>
+
+    </div>
+
+</section>
+
+
+        <!-- =================================================
+             TABEL DATA
+        ================================================== -->
+
+        <section class="data-table-container">
+
+            <table class="data-aset-table">
+
+                <thead>
+
+                    <tr>
+
+                        <th>No</th>
+
+                        <th>
+                            Kode Barang
+                        </th>
+
+                        <th>
+                            Penggunaan
+                        </th>
+
+                        <th>
+                            NUB
+                        </th>
+
+                        <th>
+                            Luas
+                        </th>
+
+                        <th>
+                            Kecamatan
+                        </th>
+
+                        <th>
+                            Desa
+                        </th>
+
+                        <th>
+                            Status
+                        </th>
+
+                        <th>
+                            Aksi
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody id="dataAsetBody">
+
+                    <tr>
+
+                        <td colspan="9">
+                            Memuat data...
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+
+    </main>
+
+
+    <script src="js/data-aset.js"></script>
+
+</body>
+
+</html>

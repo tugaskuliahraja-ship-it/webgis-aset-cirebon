@@ -1,0 +1,3257 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* ======================================================
+   HEADER WEBGIS
+====================================================== */
+
+.webgis-header {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+    right: 0;
+
+    height: 64px;
+
+    background: rgba(255, 255, 255, 0.97);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 22px;
+
+    box-sizing: border-box;
+
+    border-bottom: 1px solid #d6dee5;
+
+    box-shadow:
+        0 2px 8px
+        rgba(0, 0, 0, 0.10);
+
+    z-index: 2000;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+}
+
+
+/* ======================================================
+   BRAND / IDENTITAS
+====================================================== */
+
+.header-brand {
+    display: flex;
+    align-items: center;
+
+    gap: 11px;
+}
+
+.header-logo {
+    width: 42px;
+    height: 48px;
+
+    object-fit: contain;
+}
+
+.header-text {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+.header-title {
+    font-size: 17px;
+
+    font-weight: 700;
+
+    color: #0B5C97;
+
+    line-height: 1.15;
+}
+
+.header-subtitle {
+    margin-top: 3px;
+
+    font-size: 11px;
+
+    font-weight: 500;
+
+    color: #5f6b75;
+}
+
+
+/* ======================================================
+   NAVBAR
+====================================================== */
+
+.header-nav {
+    display: flex;
+
+    align-items: center;
+
+    height: 100%;
+
+    gap: 5px;
+}
+
+.nav-item {
+    height: 100%;
+
+    padding: 0 15px;
+
+    display: flex;
+    align-items: center;
+
+    color: #3b4650;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    box-sizing: border-box;
+
+    border-bottom: 3px solid transparent;
+
+    transition: 0.2s;
+}
+
+.nav-item:hover {
+    color: #0B5C97;
+
+    background:
+        rgba(11, 92, 151, 0.05);
+}
+
+.nav-item.active {
+    color: #0B5C97;
+
+    border-bottom-color: #0B5C97;
+}
+
+
+/* ======================================================
+   PETA
+====================================================== */
+
+#map {
+    position: absolute;
+
+    top: 64px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    width: 100%;
+
+    height: calc(100vh - 64px);
+}
+
+
+/* ======================================================
+   PANEL FILTER
+====================================================== */
+
+.filter-panel {
+    position: absolute;
+
+    top: 79px;
+    left: 55px;
+
+    z-index: 1000;
+
+    width: 190px;
+
+    background: rgba(255, 255, 255, 0.96);
+
+    padding: 12px;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 3px 14px
+        rgba(0, 0, 0, 0.22);
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+}
+
+.filter-title {
+    font-size: 13px;
+    font-weight: 700;
+
+    color: #0B5C97;
+
+    margin-bottom: 10px;
+
+    padding-bottom: 6px;
+
+    border-bottom:
+        1px solid #d5dce2;
+}
+
+.filter-panel label {
+    display: block;
+
+    font-size: 10px;
+    font-weight: 600;
+
+    color: #444444;
+
+    margin-top: 8px;
+    margin-bottom: 4px;
+}
+
+
+/* ======================================================
+   DROPDOWN FILTER
+====================================================== */
+
+.filter-panel select {
+    width: 100%;
+
+    padding: 6px 7px;
+
+    font-size: 10px;
+
+    color: #222222;
+
+    background: #ffffff;
+
+    border: 1px solid #c7d0d8;
+
+    border-radius: 6px;
+
+    outline: none;
+
+    cursor: pointer;
+
+    box-sizing: border-box;
+}
+
+.filter-panel select:focus {
+    border-color: #0B5C97;
+
+    box-shadow:
+        0 0 0 2px
+        rgba(11, 92, 151, 0.12);
+}
+
+
+/* ======================================================
+   PENCARIAN ASET
+====================================================== */
+
+.search-aset {
+    display: flex;
+
+    gap: 5px;
+
+    margin-bottom: 10px;
+}
+
+.search-aset input {
+    width: 100%;
+
+    min-width: 0;
+
+    padding: 7px 8px;
+
+    font-size: 10px;
+
+    border: 1px solid #c7d0d8;
+
+    border-radius: 6px;
+
+    background: white;
+
+    color: #222222;
+
+    outline: none;
+
+    box-sizing: border-box;
+}
+
+.search-aset input:focus {
+    border-color: #0B5C97;
+
+    box-shadow:
+        0 0 0 2px
+        rgba(11, 92, 151, 0.15);
+}
+
+#btnSearchAset {
+    border: none;
+
+    padding: 7px 10px;
+
+    border-radius: 6px;
+
+    background: #0B5C97;
+
+    color: white;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+#btnSearchAset:hover {
+    background: #084773;
+}
+
+
+/* ======================================================
+   HASIL PENCARIAN ASET
+====================================================== */
+
+.hasil-pencarian {
+    display: none;
+
+    margin-bottom: 10px;
+
+    background: white;
+
+    border: 1px solid #c7d0d8;
+
+    border-radius: 7px;
+
+    max-height: 220px;
+
+    overflow-y: auto;
+
+    box-shadow:
+        0 3px 10px
+        rgba(0, 0, 0, 0.12);
+}
+
+.hasil-item {
+    padding: 8px 9px;
+
+    cursor: pointer;
+
+    border-bottom:
+        1px solid #e3e7ea;
+
+    background: white;
+
+    transition:
+        background 0.15s ease;
+}
+
+.hasil-item:last-child {
+    border-bottom: none;
+}
+
+.hasil-item:hover {
+    background: #EAF3F9;
+}
+
+.hasil-penggunaan {
+    font-size: 10px;
+
+    font-weight: 700;
+
+    color: #0B5C97;
+
+    margin-bottom: 2px;
+}
+
+.hasil-lokasi {
+    font-size: 9px;
+
+    color: #444444;
+
+    margin-bottom: 2px;
+}
+
+.hasil-kode {
+    font-size: 8px;
+
+    color: #777777;
+}
+
+.hasil-kosong {
+    padding: 9px;
+
+    font-size: 9px;
+
+    color: #666666;
+
+    text-align: center;
+}
+
+.hasil-pencarian::-webkit-scrollbar {
+    width: 5px;
+}
+
+.hasil-pencarian::-webkit-scrollbar-thumb {
+    background: #9eabb5;
+
+    border-radius: 10px;
+}
+
+
+/* ======================================================
+   RESET FILTER
+====================================================== */
+
+#resetFilter {
+    width: 100%;
+
+    margin-top: 10px;
+
+    padding: 7px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background: #0B5C97;
+
+    color: white;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+#resetFilter:hover {
+    background: #084773;
+}
+
+
+/* ======================================================
+   STATISTIK FILTER
+====================================================== */
+
+.statistik-filter {
+    margin-top: 11px;
+
+    padding: 11px 12px;
+
+    background:
+        rgba(255, 255, 255, 0.96);
+
+    border:
+        1px solid #d5dce2;
+
+    border-radius: 8px;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+}
+
+.statistik-title {
+    color: #0B5C97;
+
+    font-size: 11.5px;
+
+    font-weight: 700;
+
+    margin-bottom: 8px;
+
+    padding-bottom: 6px;
+
+    border-bottom:
+        1px solid #d5dce2;
+}
+
+.statistik-row {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 7px;
+
+    font-size: 10px;
+
+    color: #444444;
+}
+
+.statistik-row:last-child {
+    margin-bottom: 0;
+}
+
+.statistik-row strong {
+    color: #0B5C97;
+
+    font-size: 10.5px;
+
+    font-weight: 700;
+
+    text-align: right;
+}
+
+/* ======================================================
+   POPUP INFORMASI ASET
+====================================================== */
+
+.popup-aset-wrapper
+.leaflet-popup-content-wrapper {
+    padding: 0;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    background: white;
+
+    border:
+        2px solid #607D8B;
+
+    box-shadow:
+        0 6px 22px
+        rgba(0, 0, 0, 0.24);
+}
+
+.popup-aset-wrapper
+.leaflet-popup-content {
+    margin: 0 !important;
+
+    width: 275px !important;
+}
+
+.popup-aset-wrapper
+.leaflet-popup-tip {
+    background: white;
+
+    border-right:
+        2px solid #607D8B;
+
+    border-bottom:
+        2px solid #607D8B;
+}
+
+.popup-aset-wrapper
+.leaflet-popup-close-button {
+    color: white !important;
+
+    font-size: 18px !important;
+
+    top: 7px !important;
+
+    right: 8px !important;
+
+    z-index: 999;
+}
+
+.popup-aset-wrapper
+.leaflet-popup-close-button:hover {
+    color: #dddddd !important;
+}
+
+
+/* ======================================================
+   CONTAINER POPUP
+====================================================== */
+
+.popup-aset {
+    width: 275px;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: white;
+}
+
+
+/* ======================================================
+   HEADER POPUP
+====================================================== */
+
+.popup-header {
+    background: #0B5C97;
+
+    color: white;
+
+    padding:
+        10px
+        32px
+        10px
+        13px;
+}
+
+.popup-title {
+    font-size: 15px;
+
+    font-weight: 700;
+
+    margin-bottom: 2px;
+}
+
+.popup-subtitle {
+    font-size: 10px;
+
+    opacity: 0.9;
+}
+
+
+/* ======================================================
+   BODY POPUP
+====================================================== */
+
+.popup-body {
+    width: 100%;
+
+    background: white;
+
+    position: relative;
+}
+
+
+/* Watermark logo */
+.popup-body::before {
+    content: "";
+
+    position: absolute;
+
+    width: 145px;
+    height: 145px;
+
+    top: 50%;
+    left: 69%;
+
+    transform:
+        translate(-50%, -50%);
+
+    background-image:
+        url("../images/Logo Kabupaten Cirebon.gif");
+
+    background-size: contain;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+    opacity: 0.34;
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+
+/* ======================================================
+   BARIS POPUP
+====================================================== */
+
+.popup-row {
+    display: grid;
+
+    grid-template-columns:
+        95px
+        1fr;
+
+    min-height: 31px;
+
+    position: relative;
+
+    z-index: 1;
+
+    border-bottom:
+        1px solid #c7d0d8;
+}
+
+.popup-row:last-child {
+    border-bottom: none;
+}
+
+
+/* ======================================================
+   KOLOM KIRI POPUP
+====================================================== */
+
+.popup-label {
+    background:
+        rgba(42, 105, 150, 0.72);
+
+    color: white;
+
+    font-weight: 600;
+
+    font-size: 10px;
+
+    padding:
+        7px
+        9px;
+
+    display: flex;
+
+    align-items: center;
+
+    border-right:
+        1px solid #b8c4ce;
+
+    border-bottom:
+        1px solid
+        rgba(255, 255, 255, 0.22);
+}
+
+
+/* ======================================================
+   KOLOM KANAN POPUP
+====================================================== */
+
+.popup-value {
+    background:
+        rgba(255, 255, 255, 0.70);
+
+    color: #333333;
+
+    font-size: 10px;
+
+    padding:
+        7px
+        9px;
+
+    display: flex;
+
+    align-items: center;
+
+    line-height: 1.3;
+
+    word-break: break-word;
+
+    border-bottom:
+        1px solid #d5dce2;
+}
+
+
+/* ======================================================
+   STATUS
+====================================================== */
+
+.status-badge {
+    display: inline-block;
+
+    padding:
+        3px
+        7px;
+
+    border-radius: 14px;
+
+    background: #E8F5E9;
+
+    color: #2E7D32;
+
+    font-size: 8.5px;
+
+    font-weight: 700;
+}
+
+
+/* ======================================================
+   TOOLTIP HOVER
+====================================================== */
+
+.tooltip-aset-wrapper {
+    background: transparent !important;
+
+    border: none !important;
+
+    box-shadow: none !important;
+
+    padding: 0 !important;
+
+    pointer-events: none !important;
+}
+
+.tooltip-aset-wrapper,
+.tooltip-aset-wrapper * {
+    pointer-events: none !important;
+}
+
+.tooltip-aset-wrapper::before {
+    border-top-color:
+        white !important;
+}
+
+.tooltip-aset {
+    min-width: 155px;
+
+    max-width: 225px;
+
+    border-radius: 8px;
+
+    overflow: hidden;
+
+    background: white;
+
+    box-shadow:
+        0 4px 14px
+        rgba(0, 0, 0, 0.24);
+}
+
+.tooltip-title {
+    background: #0B5C97;
+
+    color: white;
+
+    font-weight: 700;
+
+    padding:
+        6px
+        10px;
+
+    font-size: 10px;
+}
+
+.tooltip-keterangan {
+    background: white;
+
+    color: #333333;
+
+    padding:
+        8px
+        10px;
+
+    line-height: 1.35;
+
+    font-size: 9px;
+}
+
+
+/* ======================================================
+   LEGENDA ASET
+====================================================== */
+
+.legend-aset {
+    background:
+        rgba(255, 255, 255, 0.94);
+
+    padding:
+        10px
+        12px;
+
+    border-radius: 9px;
+
+    box-shadow:
+        0 3px 12px
+        rgba(0, 0, 0, 0.22);
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 10px;
+
+    max-height: 300px;
+
+    overflow-y: auto;
+
+    min-width: 145px;
+}
+
+.legend-title {
+    font-size: 12px;
+
+    font-weight: 700;
+
+    color: #0B5C97;
+
+    margin-bottom: 8px;
+
+    padding-bottom: 6px;
+
+    border-bottom:
+        1px solid #d5dce2;
+}
+
+.legend-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    margin-bottom: 5px;
+
+    color: #333333;
+}
+
+.legend-color {
+    width: 13px;
+
+    height: 13px;
+
+    border-radius: 3px;
+
+    flex-shrink: 0;
+
+    border:
+        1px solid
+        rgba(0, 0, 0, 0.20);
+}
+
+.legend-aset::-webkit-scrollbar {
+    width: 5px;
+}
+
+.legend-aset::-webkit-scrollbar-thumb {
+    background: #9eabb5;
+
+    border-radius: 10px;
+}
+
+/* ======================================================
+   BERANDA PAGE
+====================================================== */
+
+.beranda-page {
+    min-height: 100vh;
+
+    padding-top: 64px;
+
+    background: #f5f8fa;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    box-sizing: border-box;
+}
+
+
+/* ======================================================
+   BACKGROUND HERO + RINGKASAN
+====================================================== */
+
+.beranda-background {
+    position: relative;
+
+    background-image:
+        linear-gradient(
+            rgba(6, 50, 88, 0.58),
+            rgba(6, 50, 88, 0.58)
+        ),
+        url("../images/alun-cirebon.webp");
+
+    background-size: cover;
+
+    background-position: center center;
+
+    background-repeat: no-repeat;
+
+    box-sizing: border-box;
+}
+
+
+/* ======================================================
+   HERO BERANDA
+====================================================== */
+
+.beranda-hero {
+    min-height: 410px;
+
+    padding:
+        70px
+        30px
+        55px
+        30px;
+
+    text-align: center;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    box-sizing: border-box;
+}
+
+
+/* ======================================================
+   JUDUL HERO
+====================================================== */
+
+.beranda-hero h1 {
+    margin: 0;
+
+    max-width: 850px;
+
+    color: white;
+
+    font-size: 34px;
+
+    font-weight: 700;
+
+    line-height: 1.3;
+
+    text-shadow:
+        0 2px 8px
+        rgba(0, 0, 0, 0.38);
+}
+
+
+/* ======================================================
+   DESKRIPSI HERO
+====================================================== */
+
+.beranda-hero p {
+    max-width: 680px;
+
+    margin:
+        18px
+        auto
+        27px
+        auto;
+
+    color:
+        rgba(255, 255, 255, 0.94);
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    text-shadow:
+        0 1px 5px
+        rgba(0, 0, 0, 0.35);
+}
+
+
+/* ======================================================
+   TOMBOL BUKA PETA
+====================================================== */
+
+.btn-buka-peta {
+    display: inline-block;
+
+    padding:
+        11px
+        21px;
+
+    border-radius: 7px;
+
+    background: white;
+
+    color: #0B5C97;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+    box-shadow:
+        0 3px 12px
+        rgba(0, 0, 0, 0.22);
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.btn-buka-peta:hover {
+    background: #EAF3F9;
+
+    transform:
+        translateY(-1px);
+
+    box-shadow:
+        0 5px 16px
+        rgba(0, 0, 0, 0.26);
+}
+
+
+/* ======================================================
+   RINGKASAN DATA
+====================================================== */
+
+.dashboard-ringkasan {
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    padding:
+        20px
+        30px
+        65px
+        30px;
+
+    box-sizing: border-box;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+}
+
+
+/* ======================================================
+   HEADING RINGKASAN
+====================================================== */
+
+.beranda-background .dashboard-heading {
+    margin-bottom: 18px;
+}
+
+.beranda-background .dashboard-heading h2 {
+    margin: 0;
+
+    color: white;
+
+    font-size: 19px;
+
+    font-weight: 700;
+
+    text-shadow:
+        0 1px 5px
+        rgba(0, 0, 0, 0.32);
+}
+
+.beranda-background .dashboard-heading p {
+    margin:
+        5px
+        0
+        0
+        0;
+
+    color:
+        rgba(255, 255, 255, 0.88);
+
+    font-size: 11px;
+
+    text-shadow:
+        0 1px 4px
+        rgba(0, 0, 0, 0.28);
+}
+
+
+/* ======================================================
+   KARTU RINGKASAN
+====================================================== */
+
+.dashboard-cards {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 16px;
+}
+
+.dashboard-card {
+    background:
+        rgba(255, 255, 255, 0.93);
+
+    padding: 18px;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.55);
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 4px 16px
+        rgba(0, 0, 0, 0.18);
+
+    backdrop-filter:
+        blur(4px);
+
+    -webkit-backdrop-filter:
+        blur(4px);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+
+    box-sizing: border-box;
+}
+
+.dashboard-card:hover {
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 7px 20px
+        rgba(0, 0, 0, 0.22);
+}
+
+.dashboard-card-label {
+    color: #667580;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    margin-bottom: 9px;
+}
+
+.dashboard-card-value {
+    color: #0B5C97;
+
+    font-size: 24px;
+
+    font-weight: 700;
+
+    line-height: 1.1;
+}
+
+.dashboard-card-unit {
+    margin-top: 6px;
+
+    color: #8a959d;
+
+    font-size: 9px;
+}
+
+
+/* ======================================================
+   DISTRIBUSI PENGGUNAAN ASET
+====================================================== */
+
+.distribusi-aset {
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    padding:
+        45px
+        30px
+        70px
+        30px;
+
+    box-sizing: border-box;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+}
+
+.distribusi-aset .dashboard-heading {
+    margin-bottom: 18px;
+}
+
+.distribusi-aset .dashboard-heading h2 {
+    margin: 0;
+
+    color: #243746;
+
+    font-size: 19px;
+
+    font-weight: 700;
+}
+
+.distribusi-aset .dashboard-heading p {
+    margin:
+        5px
+        0
+        0
+        0;
+
+    color: #74818b;
+
+    font-size: 11px;
+}
+
+
+/* ======================================================
+   DAFTAR DISTRIBUSI
+====================================================== */
+
+.distribusi-list {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 12px;
+}
+
+.distribusi-item {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 12px;
+
+    padding:
+        12px
+        14px;
+
+    background: white;
+
+    border:
+        1px solid #dce3e8;
+
+    border-radius: 8px;
+
+    box-shadow:
+        0 2px 8px
+        rgba(0, 0, 0, 0.05);
+
+    box-sizing: border-box;
+}
+
+.distribusi-nama {
+    color: #47545e;
+
+    font-size: 10px;
+
+    font-weight: 600;
+}
+
+.distribusi-jumlah {
+    min-width: 30px;
+
+    padding:
+        4px
+        7px;
+
+    border-radius: 12px;
+
+    background:
+        rgba(11, 92, 151, 0.10);
+
+    color: #0B5C97;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    text-align: center;
+}
+
+
+/* ======================================================
+   RESPONSIVE BERANDA
+====================================================== */
+
+@media
+(max-width: 900px) {
+
+    .dashboard-cards {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .distribusi-list {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+@media
+(max-width: 700px) {
+
+    .beranda-hero {
+        min-height: 360px;
+
+        padding:
+            55px
+            20px
+            45px
+            20px;
+    }
+
+    .beranda-hero h1 {
+        font-size: 25px;
+    }
+
+    .beranda-hero p {
+        font-size: 12px;
+    }
+
+    .dashboard-ringkasan {
+        padding:
+            20px
+            20px
+            50px
+            20px;
+    }
+
+}
+
+
+@media
+(max-width: 520px) {
+
+    .dashboard-cards {
+        grid-template-columns:
+            1fr;
+    }
+
+    .distribusi-list {
+        grid-template-columns:
+            1fr;
+    }
+
+}
+
+/* ======================================================
+   HALAMAN DATA ASET
+====================================================== */
+
+.data-aset-page {
+    min-height: 100vh;
+
+    padding:
+        64px
+        30px
+        50px
+        30px;
+
+    background: #f5f8fa;
+
+    box-sizing: border-box;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+}
+
+
+/* ======================================================
+   HEADER DATA ASET
+====================================================== */
+
+.data-aset-header {
+    max-width: 1250px;
+
+    margin:
+        35px
+        auto
+        20px
+        auto;
+}
+
+.data-aset-header h1 {
+    margin: 0;
+
+    color: #243746;
+
+    font-size: 24px;
+
+    font-weight: 700;
+}
+
+.data-aset-header p {
+    margin:
+        6px
+        0
+        0
+        0;
+
+    color: #74818b;
+
+    font-size: 11px;
+
+    line-height: 1.5;
+}
+
+
+/* ======================================================
+   TOOLBAR DATA ASET
+====================================================== */
+
+.data-aset-toolbar {
+    max-width: 1250px;
+
+    margin:
+        0
+        auto
+        15px
+        auto;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+.data-search {
+    width: 280px;
+}
+
+.data-search input {
+    width: 100%;
+
+    padding:
+        9px
+        11px;
+
+    border:
+        1px solid #cbd5dc;
+
+    border-radius: 7px;
+
+    background: white;
+
+    color: #333333;
+
+    font-size: 10px;
+
+    outline: none;
+
+    box-sizing: border-box;
+}
+
+.data-search input:focus {
+    border-color: #0B5C97;
+
+    box-shadow:
+        0 0 0 2px
+        rgba(11, 92, 151, 0.12);
+}
+
+
+/* ======================================================
+   CONTAINER TABEL
+====================================================== */
+
+.data-table-container {
+    max-width: 1250px;
+
+    margin: 0 auto;
+
+    overflow-x: auto;
+
+    background: white;
+
+    border:
+        1px solid #dce3e8;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 3px 12px
+        rgba(0, 0, 0, 0.06);
+}
+
+
+/* ======================================================
+   TABEL
+====================================================== */
+
+.data-aset-table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    min-width: 1050px;
+}
+
+.data-aset-table thead {
+    background: #0B5C97;
+
+    color: white;
+}
+
+.data-aset-table th {
+    padding:
+        11px
+        11px;
+
+    text-align: left;
+
+    font-size: 10.5px;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+.data-aset-table td {
+    padding:
+        10px
+        11px;
+
+    color: #3f4b55;
+
+    font-size: 10px;
+
+    border-bottom:
+        1px solid #e6ebef;
+
+    vertical-align: middle;
+}
+
+.data-aset-table tbody tr:hover {
+    background: #f4f9fc;
+}
+
+.data-aset-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+/* ======================================================
+   STATUS
+====================================================== */
+
+.table-status {
+    display: inline-block;
+
+    padding:
+        4px
+        8px;
+
+    border-radius: 12px;
+
+    background: #E8F5E9;
+
+    color: #2E7D32;
+
+    font-size: 9px;
+
+    font-weight: 700;
+}
+
+
+/* ======================================================
+   TOMBOL LIHAT
+====================================================== */
+
+.btn-lihat-peta {
+    padding:
+        6px
+        10px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    background: #0B5C97;
+
+    color: white;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+.btn-lihat-peta:hover {
+    background: #084773;
+}
+
+
+/* ======================================================
+   DATA KOSONG
+====================================================== */
+
+.data-kosong {
+    padding: 25px !important;
+
+    text-align: center !important;
+
+    color: #77838c !important;
+
+    font-size: 10px !important;
+}
+
+
+/* ======================================================
+   RESPONSIVE
+====================================================== */
+
+@media
+(max-width: 700px) {
+
+    .data-aset-page {
+        padding:
+            64px
+            15px
+            35px
+            15px;
+    }
+
+    .data-search {
+        width: 100%;
+    }
+
+}
+
+/* ======================================================
+   FILTER HALAMAN DATA ASET
+====================================================== */
+
+.data-aset-toolbar {
+    max-width: 1250px;
+
+    margin:
+        0
+        auto
+        15px
+        auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 12px;
+}
+
+
+.data-filter-group {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+}
+
+
+.data-filter-group select {
+    min-width: 145px;
+
+    padding:
+        8px
+        9px;
+
+    border:
+        1px solid #cbd5dc;
+
+    border-radius: 7px;
+
+    background: white;
+
+    color: #333333;
+
+    font-size: 9px;
+
+    outline: none;
+
+    cursor: pointer;
+}
+
+
+.data-filter-group select:focus {
+    border-color: #0B5C97;
+
+    box-shadow:
+        0 0 0 2px
+        rgba(11, 92, 151, 0.10);
+}
+
+
+#resetDataFilter {
+    padding:
+        8px
+        11px;
+
+    border:
+        1px solid #0B5C97;
+
+    border-radius: 7px;
+
+    background: white;
+
+    color: #0B5C97;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+
+#resetDataFilter:hover {
+    background: #0B5C97;
+
+    color: white;
+}
+
+
+/* ======================================================
+   RESPONSIVE TOOLBAR DATA
+====================================================== */
+
+@media
+(max-width: 950px) {
+
+    .data-aset-toolbar {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    .data-search {
+        width: 100%;
+    }
+
+    .data-filter-group {
+        width: 100%;
+
+        flex-wrap: wrap;
+    }
+
+    .data-filter-group select {
+        flex: 1;
+
+        min-width: 140px;
+    }
+
+}
+
+/* ======================================================
+   TOOL UKUR JARAK
+====================================================== */
+
+.map-tools {
+    position: fixed;
+
+    top: 145px;
+    right: 12px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7px;
+
+    z-index: 1800;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+}
+
+
+.map-tool-btn {
+    width: 44px;
+    height: 44px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    border:
+        1px solid
+        rgba(0, 0, 0, 0.15);
+
+    border-radius: 9px;
+
+    background:
+        rgba(255, 255, 255, 0.96);
+
+    cursor: pointer;
+
+    box-shadow:
+        0 2px 7px
+        rgba(0, 0, 0, 0.20);
+}
+
+.map-tool-btn:hover {
+    background:
+        #ffffff;
+
+    transform:
+        translateY(-1px);
+}
+
+
+.map-tool-btn.active {
+    border-color:
+        #F4C430;
+
+    box-shadow:
+        0 0 0 2px
+        rgba(244, 196, 48, 0.18),
+        0 2px 7px
+        rgba(0, 0, 0, 0.20);
+}
+
+
+/* IKON PENGGARIS */
+
+.icon-penggaris {
+    font-size: 22px;
+
+    line-height: 1;
+
+    filter:
+        sepia(1)
+        saturate(8)
+        hue-rotate(355deg)
+        brightness(1.05);
+}
+
+
+/* TOMBOL HAPUS */
+
+.map-tool-secondary {
+    width: 44px;
+    height: 44px;
+
+    padding: 0;
+
+    background:
+        rgba(255, 255, 255, 0.96);
+
+    color:
+        #607D8B;
+
+    font-size: 16px;
+
+    font-weight: 700;
+}
+
+
+.map-tool-secondary:hover {
+    background:
+        #ffffff;
+
+    color:
+        #455A64;
+}
+/* Label jarak final */
+
+.leaflet-tooltip.tooltip-jarak {
+    background: white;
+
+    border:
+        1px solid #0B5C97;
+
+    border-radius: 7px;
+
+    color:
+        #243746;
+
+    font-size:
+        10px;
+
+    font-weight:
+        700;
+
+    padding:
+        6px
+        9px;
+
+    box-shadow:
+        0 2px 7px
+        rgba(0, 0, 0, 0.18);
+}
+
+
+/* Label jarak sementara */
+
+.leaflet-tooltip.tooltip-jarak-sementara {
+    background:
+        rgba(255, 255, 255, 0.95);
+
+    border:
+        1px dashed #F4C430;
+
+    border-radius:
+        7px;
+
+    color:
+        #243746;
+
+    font-size:
+        10px;
+
+    font-weight:
+        700;
+
+    padding:
+        5px
+        8px;
+
+    box-shadow:
+        0 2px 6px
+        rgba(0, 0, 0, 0.15);
+}
+
+/* ======================================================
+   KURSOR SAAT MODE UKUR AKTIF
+====================================================== */
+
+#map.mode-ukur-aktif,
+#map.mode-ukur-aktif .leaflet-interactive,
+#map.mode-ukur-aktif .leaflet-container {
+    cursor: crosshair !important;
+}
+
+/* ======================================================
+   HALAMAN INFORMASI
+====================================================== */
+
+.informasi-page {
+    height: 100vh;
+
+    padding-top: 64px;
+
+    background: #f4f7f9;
+
+    box-sizing: border-box;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    overflow: hidden;
+}
+
+
+/* ======================================================
+   FRAME UTAMA
+   1/3 FOTO + 2/3 INFORMASI
+====================================================== */
+
+.informasi-split {
+    width: 100%;
+    height: calc(100vh - 64px);
+
+    margin: 0;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 2fr;
+
+    background: #ffffff;
+
+    overflow: hidden;
+}
+
+
+/* ======================================================
+   FOTO KIRI
+====================================================== */
+
+.informasi-photo {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+
+    background: #0B5C97;
+}
+
+
+.informasi-photo img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    object-position: center center;
+}
+
+
+/* Overlay foto */
+
+.informasi-photo::after {
+    content: '';
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(4, 40, 69, 0.75) 0%,
+            rgba(4, 40, 69, 0.20) 35%,
+            rgba(4, 40, 69, 0.03) 65%
+        );
+}
+
+
+/* ======================================================
+   TEKS PADA FOTO
+====================================================== */
+
+.informasi-photo-overlay {
+    position: absolute;
+
+    left: 36px;
+    right: 36px;
+    bottom: 36px;
+
+    z-index: 2;
+
+    color: #ffffff;
+}
+
+
+.informasi-photo-title {
+    font-size: 24px;
+
+    font-weight: 700;
+
+    line-height: 1.2;
+}
+
+
+.informasi-photo-subtitle {
+    margin-top: 7px;
+
+    color:
+        rgba(255, 255, 255, 0.92);
+
+    font-size: 13px;
+}
+
+
+/* ======================================================
+   PANEL INFORMASI KANAN
+====================================================== */
+
+.informasi-panel {
+    height: 100%;
+
+    padding:
+        48px
+        52px
+        40px;
+
+    box-sizing: border-box;
+
+    overflow-y: auto;
+
+    background: #ffffff;
+}
+
+
+/* ======================================================
+   SEMUA SUBJUDUL
+====================================================== */
+
+.informasi-block h1,
+.informasi-block h2 {
+    margin:
+        0
+        0
+        14px;
+
+    color: #0B5C97;
+
+    font-size: 21px;
+
+    font-weight: 700;
+
+    line-height: 1.3;
+}
+
+
+/* ======================================================
+   KOTAK ISI INFORMASI
+====================================================== */
+
+.informasi-block p {
+    margin: 0;
+
+    padding:
+        18px
+        20px;
+
+    background:
+        #f4f8fb;
+
+    border-left:
+        4px solid #0B5C97;
+
+    border-radius:
+        0
+        10px
+        10px
+        0;
+
+    color: #4f5f6b;
+
+    font-size: 13px;
+
+    line-height: 1.9;
+
+    text-align: justify;
+
+    text-justify: inter-word;
+
+    box-sizing: border-box;
+}
+
+
+/* ======================================================
+   GARIS PEMISAH
+====================================================== */
+
+.informasi-divider {
+    width: 100%;
+    height: 1px;
+
+    margin:
+        28px
+        0;
+
+    background: #dce4e9;
+}
+
+
+/* ======================================================
+   BOX PENGEMBANG SISTEM
+====================================================== */
+
+.informasi-developer {
+    padding:
+        18px
+        20px;
+
+    background:
+        #f4f8fb;
+
+    border-left:
+        4px solid #0B5C97;
+
+    border-radius:
+        0
+        10px
+        10px
+        0;
+
+    box-sizing: border-box;
+}
+
+
+/* Nama pengembang */
+
+.developer-name {
+    margin-bottom: 7px;
+
+    color: #4f5f6b;
+
+    font-size: 13px;
+
+    font-weight: 400;
+
+    line-height: 1.8;
+}
+
+
+/* Keterangan pengembang */
+
+.informasi-developer p {
+    margin: 0;
+
+    padding: 0;
+
+    background: transparent;
+
+    border: none;
+
+    border-radius: 0;
+
+    color: #4f5f6b;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+
+    text-align: left;
+}
+
+
+/* Tahun */
+
+.developer-year {
+    margin-top: 7px;
+
+    color: #4f5f6b;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+}
+
+
+/* ======================================================
+   RESPONSIVE TABLET
+====================================================== */
+
+@media
+(max-width: 900px) {
+
+    .informasi-page {
+        height: auto;
+
+        overflow: visible;
+    }
+
+
+    .informasi-split {
+        height: auto;
+
+        min-height:
+            calc(100vh - 64px);
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .informasi-photo {
+        height: 340px;
+    }
+
+
+    .informasi-panel {
+        height: auto;
+
+        padding:
+            34px
+            28px;
+    }
+
+}
+
+
+/* ======================================================
+   RESPONSIVE MOBILE
+====================================================== */
+
+@media
+(max-width: 600px) {
+
+    .informasi-photo {
+        height: 270px;
+    }
+
+
+    .informasi-photo-overlay {
+        left: 22px;
+        right: 22px;
+        bottom: 22px;
+    }
+
+
+    .informasi-photo-title {
+        font-size: 20px;
+    }
+
+
+    .informasi-photo-subtitle {
+        font-size: 12px;
+    }
+
+
+    .informasi-panel {
+        padding:
+            26px
+            18px
+            34px;
+    }
+
+
+    .informasi-block h1,
+    .informasi-block h2 {
+        font-size: 19px;
+    }
+
+
+    .informasi-block p,
+    .developer-name,
+    .informasi-developer p,
+    .developer-year {
+        font-size: 12px;
+    }
+
+}
+
+/* ======================================================
+   ======================================================
+   RESPONSIVE MOBILE FINAL
+   WEBGIS ASET PEMDA KABUPATEN CIREBON
+   ======================================================
+   ====================================================== */
+
+@media (max-width: 700px) {
+
+
+    /* ==================================================
+       1. HEADER / NAVBAR SEMUA HALAMAN
+    ================================================== */
+
+    .webgis-header {
+        height: 64px;
+
+        padding:
+            0
+            9px;
+
+        gap: 6px;
+
+        box-sizing: border-box;
+    }
+
+
+    .header-brand {
+        min-width: 112px;
+        width: 112px;
+
+        gap: 5px;
+
+        flex-shrink: 0;
+    }
+
+
+    .header-logo {
+        width: 32px;
+        height: 39px;
+
+        flex-shrink: 0;
+
+        object-fit: contain;
+    }
+
+
+    .header-text {
+        min-width: 0;
+    }
+
+
+    .header-title {
+        font-size: 11px;
+
+        line-height: 1.05;
+
+        white-space: nowrap;
+    }
+
+
+    .header-subtitle {
+        margin-top: 3px;
+
+        font-size: 7.5px;
+
+        white-space: nowrap;
+    }
+
+
+    .header-nav {
+        flex: 1;
+
+        min-width: 0;
+
+        justify-content: flex-end;
+
+        gap: 0;
+    }
+
+
+    .nav-item {
+        height: 64px;
+
+        padding:
+            0
+            7px;
+
+        font-size: 8.5px;
+
+        line-height: 1.15;
+
+        text-align: center;
+
+        justify-content: center;
+
+        white-space: normal;
+
+        border-bottom-width: 2px;
+    }
+
+
+
+    /* ==================================================
+       2. BERANDA
+    ================================================== */
+
+    .beranda-page {
+        padding-top: 64px;
+    }
+
+
+    .beranda-hero {
+        min-height: 330px;
+
+        padding:
+            52px
+            20px
+            38px;
+    }
+
+
+    .beranda-hero h1 {
+        max-width: 330px;
+
+        font-size: 23px;
+
+        line-height: 1.3;
+    }
+
+
+    .beranda-hero p {
+        max-width: 315px;
+
+        margin:
+            16px
+            auto
+            22px;
+
+        font-size: 10.5px;
+
+        line-height: 1.65;
+    }
+
+
+    .btn-buka-peta {
+        padding:
+            10px
+            18px;
+
+        font-size: 10px;
+    }
+
+
+    .dashboard-ringkasan {
+        padding:
+            18px
+            18px
+            42px;
+    }
+
+
+    .dashboard-heading h2 {
+        font-size: 17px;
+    }
+
+
+    .dashboard-heading p {
+        font-size: 9.5px;
+    }
+
+
+    .dashboard-cards {
+        grid-template-columns: 1fr;
+
+        gap: 13px;
+    }
+
+
+    .dashboard-card {
+        padding: 18px;
+    }
+
+
+    .dashboard-card-label {
+        font-size: 10px;
+    }
+
+
+    .dashboard-card-value {
+        font-size: 23px;
+    }
+
+
+    .dashboard-card-unit {
+        font-size: 8.5px;
+    }
+
+
+    .distribusi-aset {
+        padding:
+            35px
+            18px
+            50px;
+    }
+
+
+    .distribusi-list {
+        grid-template-columns: 1fr;
+    }
+
+
+
+    /* ==================================================
+       3. DATA ASET
+    ================================================== */
+
+    .data-aset-page {
+        padding:
+            64px
+            14px
+            35px;
+    }
+
+
+    .data-aset-header {
+        margin:
+            27px
+            auto
+            18px;
+    }
+
+
+    .data-aset-header h1 {
+        font-size: 21px;
+    }
+
+
+    .data-aset-header p {
+        font-size: 9.5px;
+
+        line-height: 1.55;
+    }
+
+
+    /* TOOLBAR */
+
+    .data-aset-toolbar {
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 10px;
+
+        margin-bottom: 14px;
+    }
+
+
+    .data-search {
+        width: 100%;
+    }
+
+
+    .data-search input {
+        width: 100%;
+
+        padding:
+            9px
+            10px;
+
+        font-size: 9.5px;
+    }
+
+
+    .data-filter-group {
+        width: 100%;
+
+        display: grid;
+
+        grid-template-columns:
+            1fr
+            1fr;
+
+        gap: 7px;
+    }
+
+
+    .data-filter-group select {
+        width: 100%;
+
+        min-width: 0;
+
+        padding:
+            8px
+            8px;
+
+        font-size: 8.5px;
+    }
+
+
+    #resetDataFilter {
+        grid-column:
+            1 / -1;
+
+        width: 100%;
+
+        padding:
+            8px;
+
+        font-size: 9px;
+    }
+
+
+    /* TABEL */
+
+    .data-table-container {
+        width: 100%;
+
+        overflow-x: auto;
+        overflow-y: visible;
+
+        -webkit-overflow-scrolling: touch;
+
+        border-radius: 9px;
+    }
+
+
+    .data-aset-table {
+        width: 100%;
+
+        min-width: 820px;
+    }
+
+
+    .data-aset-table th {
+        padding:
+            9px
+            9px;
+
+        font-size: 9px;
+
+        white-space: nowrap;
+    }
+
+
+    .data-aset-table td {
+        padding:
+            9px
+            9px;
+
+        font-size: 9px;
+
+        white-space: nowrap;
+    }
+
+
+    .table-status {
+        padding:
+            3px
+            6px;
+
+        font-size: 8px;
+    }
+
+
+    .btn-lihat-peta {
+        padding:
+            5px
+            8px;
+
+        font-size: 8px;
+    }
+
+
+
+    /* ==================================================
+       4. INFORMASI
+    ================================================== */
+
+    .informasi-page {
+        height: auto;
+
+        min-height: 100vh;
+
+        padding-top: 64px;
+
+        overflow: visible;
+    }
+
+
+    .informasi-split {
+        width: 100%;
+
+        height: auto;
+
+        min-height:
+            calc(100vh - 64px);
+
+        display: block;
+    }
+
+
+    /* FOTO */
+
+    .informasi-photo {
+        width: 100%;
+
+        height: 245px;
+        min-height: 245px;
+    }
+
+
+    .informasi-photo img {
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+
+        object-position: center center;
+    }
+
+
+    .informasi-photo-overlay {
+        left: 20px;
+        right: 20px;
+        bottom: 20px;
+    }
+
+
+    .informasi-photo-title {
+        font-size: 18px;
+    }
+
+
+    .informasi-photo-subtitle {
+        margin-top: 4px;
+
+        font-size: 10px;
+    }
+
+
+    /* PANEL */
+
+    .informasi-panel {
+        width: 100%;
+
+        height: auto;
+
+        padding:
+            26px
+            18px
+            38px;
+
+        overflow: visible;
+    }
+
+
+    .informasi-block h1,
+    .informasi-block h2 {
+        margin-bottom: 11px;
+
+        font-size: 18px;
+    }
+
+
+    .informasi-block p {
+        padding:
+            16px
+            17px;
+
+        font-size: 11px;
+
+        line-height: 1.8;
+    }
+
+
+    .informasi-divider {
+        margin:
+            25px
+            0;
+    }
+
+
+    .informasi-developer {
+        padding:
+            16px
+            17px;
+    }
+
+
+    .developer-name,
+    .informasi-developer p,
+    .developer-year {
+        font-size: 11px;
+
+        line-height: 1.8;
+    }
+
+
+
+    /* ==================================================
+       5. PETA
+    ================================================== */
+
+    #map {
+        top: 64px;
+
+        height:
+            calc(100vh - 64px);
+    }
+
+
+    /* FILTER ASET */
+
+    .filter-panel {
+        top: 79px;
+        left: 53px;
+
+        width: 185px;
+
+        padding:
+            10px;
+
+        box-sizing: border-box;
+
+        border-radius: 9px;
+    }
+
+
+    .filter-title {
+        font-size: 11px;
+
+        margin-bottom: 8px;
+    }
+
+
+    .search-aset {
+        gap: 4px;
+    }
+
+
+    .search-aset input {
+        min-width: 0;
+
+        padding:
+            7px
+            7px;
+
+        font-size: 8px;
+    }
+
+
+    .search-aset button {
+        padding:
+            7px
+            8px;
+
+        font-size: 8px;
+    }
+
+
+    .filter-panel label {
+        margin-top: 7px;
+
+        font-size: 8px;
+    }
+
+
+    .filter-panel select {
+        padding:
+            7px
+            7px;
+
+        font-size: 8px;
+    }
+
+
+    #resetFilter {
+        margin-top: 8px;
+
+        padding:
+            7px;
+
+        font-size: 8px;
+    }
+
+
+    /* RINGKASAN */
+
+    .statistik-filter {
+        margin-top: 9px;
+
+        padding:
+            9px;
+
+        border-radius: 7px;
+    }
+
+
+    .statistik-title {
+        font-size: 9px;
+    }
+
+
+    .statistik-row {
+        font-size: 8px;
+    }
+
+
+
+    /* ==================================================
+       6. LEAFLET CONTROL
+    ================================================== */
+
+    .leaflet-control-zoom {
+        margin-top: 10px !important;
+        margin-left: 10px !important;
+    }
+
+
+    .leaflet-control-zoom a {
+        width: 30px !important;
+        height: 30px !important;
+
+        line-height: 30px !important;
+
+        font-size: 18px !important;
+    }
+
+
+
+    /* ==================================================
+       7. TOOL UKUR JARAK
+    ================================================== */
+
+    .map-tools {
+        top: 137px;
+        right: 10px;
+
+        gap: 7px;
+    }
+
+
+    .map-tool-btn,
+    .map-tool-secondary {
+        width: 40px;
+        height: 40px;
+
+        border-radius: 8px;
+    }
+
+
+    .icon-penggaris {
+        font-size: 20px;
+    }
+
+
+
+    /* ==================================================
+       8. LEGENDA PETA
+    ================================================== */
+
+    .legend-aset {
+        width: 132px;
+
+        max-height: 195px;
+
+        padding:
+            8px
+            9px;
+
+        overflow-y: auto;
+
+        box-sizing: border-box;
+
+        font-size: 7.5px;
+    }
+
+
+    .legend-title {
+        margin-bottom: 6px;
+
+        font-size: 9px;
+    }
+
+
+    .legend-item {
+        min-height: 17px;
+
+        gap: 5px;
+
+        font-size: 7.5px;
+
+        line-height: 1.15;
+    }
+
+
+    .legend-color {
+        width: 11px;
+        height: 11px;
+
+        min-width: 11px;
+    }
+
+
+    /* Sedikit beri jarak dari tepi */
+
+    .leaflet-bottom.leaflet-right {
+        right: 4px;
+        bottom: 4px;
+    }
+
+
+
+    /* ==================================================
+       9. POPUP PETA
+    ================================================== */
+
+    .leaflet-popup-content-wrapper {
+        max-width:
+            calc(100vw - 60px);
+    }
+
+
+    .leaflet-popup-content {
+        max-width:
+            calc(100vw - 90px);
+    }
+
+}
+
+
+
+/* ======================================================
+   MOBILE KECIL
+====================================================== */
+
+@media (max-width: 430px) {
+
+    .webgis-header {
+        padding:
+            0
+            7px;
+    }
+
+
+    .header-brand {
+        width: 108px;
+        min-width: 108px;
+    }
+
+
+    .header-logo {
+        width: 30px;
+        height: 37px;
+    }
+
+
+    .header-title {
+        font-size: 10.5px;
+    }
+
+
+    .header-subtitle {
+        font-size: 7px;
+    }
+
+
+    .nav-item {
+        padding:
+            0
+            5px;
+
+        font-size: 8px;
+    }
+
+
+    .filter-panel {
+        left: 51px;
+
+        width: 192px;
+    }
+
+
+    .legend-aset {
+        width: 128px;
+
+        max-height: 180px;
+    }
+
+}
+/* ======================================================
+   TOGGLE FILTER PETA
+====================================================== */
+
+.filter-toggle-btn {
+    position: fixed;
+
+    top: 80px;
+    left: 53px;
+
+    z-index: 1900;
+
+    padding: 8px 11px;
+
+    border: none;
+    border-radius: 7px;
+
+    background: #0B5C97;
+    color: #ffffff;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 9px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 2px 7px
+        rgba(0, 0, 0, 0.20);
+}
+
+
+.filter-toggle-btn:hover {
+    background: #084773;
+}
+
+
+/* Panel ketika disembunyikan */
+
+.filter-panel.filter-hidden {
+    display: none;
+}
+
+
+/* ======================================================
+   MOBILE
+====================================================== */
+
+@media (max-width: 700px) {
+
+    .filter-toggle-btn {
+        top: 77px;
+        left: 52px;
+
+        padding: 7px 10px;
+
+        font-size: 8px;
+    }
+
+}

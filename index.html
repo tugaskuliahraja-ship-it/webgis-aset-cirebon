@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Beranda - WebGIS Aset Pemda Kabupaten Cirebon
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+</head>
+
+<body>
+
+    <!-- =====================================================
+         HEADER WEBGIS
+    ====================================================== -->
+
+    <header class="webgis-header">
+
+        <div class="header-brand">
+
+            <img
+                src="images/Logo Kabupaten Cirebon.gif"
+                alt="Logo Kabupaten Cirebon"
+                class="header-logo"
+            >
+
+            <div class="header-text">
+
+                <div class="header-title">
+                    WebGIS Aset Pemda
+                </div>
+
+                <div class="header-subtitle">
+                    Kabupaten Cirebon
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <nav class="header-nav">
+
+            <a
+                href="index.html"
+                class="nav-item active"
+            >
+                Beranda
+            </a>
+
+            <a
+                href="peta.html"
+                class="nav-item"
+            >
+                Peta
+            </a>
+
+            <a
+                href="data-aset.html"
+                class="nav-item"
+            >
+                Data Aset
+            </a>
+
+            <a
+        href="informasi.html"
+        class="nav-item"
+    >
+        Informasi
+    </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =====================================================
+         KONTEN BERANDA
+    ====================================================== -->
+
+    <main class="beranda-page">
+
+
+        <!-- =================================================
+             BACKGROUND HERO + RINGKASAN
+        ================================================== -->
+
+        <div class="beranda-background">
+
+
+            <!-- =============================================
+                 HERO
+            ============================================== -->
+
+            <section class="beranda-hero">
+
+                <h1>
+                    Sistem Informasi Geografis Aset
+                    Pemerintah Kabupaten Cirebon
+                </h1>
+
+                <p>
+                    Platform WebGIS untuk menampilkan,
+                    mencari, dan memantau data aset daerah
+                    secara spasial.
+                </p>
+
+                <a
+                    href="peta.html"
+                    class="btn-buka-peta"
+                >
+                    Buka Peta
+                </a>
+
+            </section>
+
+
+            <!-- =============================================
+                 RINGKASAN DATA
+            ============================================== -->
+
+            <section class="dashboard-ringkasan">
+
+                <div class="dashboard-heading">
+
+                    <h2>
+                        Ringkasan Data Aset
+                    </h2>
+
+                    <p>
+                        Informasi umum aset Pemerintah Kabupaten Cirebon
+                    </p>
+
+                </div>
+
+
+                <div class="dashboard-cards">
+
+
+                    <!-- TOTAL ASET -->
+
+                    <div class="dashboard-card">
+
+                        <div class="dashboard-card-label">
+                            Total Aset
+                        </div>
+
+                        <div
+                            class="dashboard-card-value"
+                            id="dashboardTotalAset"
+                        >
+                            -
+                        </div>
+
+                        <div class="dashboard-card-unit">
+                            bidang aset
+                        </div>
+
+                    </div>
+
+
+                    <!-- TOTAL LUAS -->
+
+                    <div class="dashboard-card">
+
+                        <div class="dashboard-card-label">
+                            Total Luas
+                        </div>
+
+                        <div
+                            class="dashboard-card-value"
+                            id="dashboardTotalLuas"
+                        >
+                            -
+                        </div>
+
+                        <div class="dashboard-card-unit">
+                            m²
+                        </div>
+
+                    </div>
+
+
+                    <!-- KECAMATAN -->
+
+                    <div class="dashboard-card">
+
+                        <div class="dashboard-card-label">
+                            Kecamatan
+                        </div>
+
+                        <div
+                            class="dashboard-card-value"
+                            id="dashboardKecamatan"
+                        >
+                            -
+                        </div>
+
+                        <div class="dashboard-card-unit">
+                            kecamatan
+                        </div>
+
+                    </div>
+
+
+                    <!-- DESA -->
+
+                    <div class="dashboard-card">
+
+                        <div class="dashboard-card-label">
+                            Desa
+                        </div>
+
+                        <div
+                            class="dashboard-card-value"
+                            id="dashboardDesa"
+                        >
+                            -
+                        </div>
+
+                        <div class="dashboard-card-unit">
+                            desa
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+
+        </div>
+
+
+        <!-- =================================================
+             DISTRIBUSI PENGGUNAAN ASET
+        ================================================== -->
+
+        <section class="distribusi-aset">
+
+            <div class="dashboard-heading">
+
+                <h2>
+                    Distribusi Penggunaan Aset
+                </h2>
+
+                <p>
+                    Jumlah aset berdasarkan kategori penggunaan
+                </p>
+
+            </div>
+
+
+            <div
+                id="distribusiPenggunaan"
+                class="distribusi-list"
+            >
+                Memuat data...
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- =====================================================
+         JAVASCRIPT BERANDA
+    ====================================================== -->
+
+    <script src="js/beranda.js"></script>
+
+
+</body>
+
+</html>
