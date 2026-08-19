@@ -2160,11 +2160,11 @@ body {
     margin:
         0
         0
-        14px;
+        10px;
 
     color: #0B5C97;
 
-    font-size: 21px;
+    font-size: 19px;
 
     font-weight: 700;
 
@@ -2180,8 +2180,8 @@ body {
     margin: 0;
 
     padding:
-        18px
-        20px;
+        14px
+        18px;
 
     background:
         #f4f8fb;
@@ -2197,9 +2197,9 @@ body {
 
     color: #4f5f6b;
 
-    font-size: 13px;
+    font-size: 12px;
 
-    line-height: 1.9;
+    line-height: 1.65;
 
     text-align: justify;
 
@@ -2218,7 +2218,7 @@ body {
     height: 1px;
 
     margin:
-        28px
+        18px
         0;
 
     background: #dce4e9;
@@ -2231,8 +2231,8 @@ body {
 
 .informasi-developer {
     padding:
-        18px
-        20px;
+        14px
+        18px;
 
     background:
         #f4f8fb;
@@ -2257,11 +2257,11 @@ body {
 
     color: #4f5f6b;
 
-    font-size: 13px;
+    font-size: 12px;
 
     font-weight: 400;
 
-    line-height: 1.8;
+    line-height: 1.6;
 }
 
 
@@ -2280,9 +2280,9 @@ body {
 
     color: #4f5f6b;
 
-    font-size: 13px;
+    font-size: 12px;
 
-    line-height: 1.8;
+    line-height: 1.6;
 
     text-align: left;
 }
@@ -2295,9 +2295,9 @@ body {
 
     color: #4f5f6b;
 
-    font-size: 13px;
+    font-size: 12px;
 
-    line-height: 1.8;
+    line-height: 1.6;
 }
 
 
