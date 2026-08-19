@@ -2144,17 +2144,10 @@ body {
 
 .informasi-panel {
     height: 100%;
-
-    padding:
-        48px
-        52px
-        40px;
-
+    padding: 32px 42px 28px;
     box-sizing: border-box;
-
-    overflow-y: auto;
-
-    background: #ffffff;
+    overflow: hidden;
+    background: #fff;
 }
 
 
