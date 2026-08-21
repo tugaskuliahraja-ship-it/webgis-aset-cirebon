@@ -47,27 +47,20 @@ const cartoLight = L.tileLayer(
 );
 
 
-// Google Satellite
-const googleSatellite = L.tileLayer(
-    'https://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}',
+// Esri World Imagery
+const esriSatellite = L.tileLayer(
+    'https://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
     {
-        maxZoom: 20,
-
-        subdomains: [
-            'mt0',
-            'mt1',
-            'mt2',
-            'mt3'
-        ],
+        maxZoom: 19,
 
         attribution:
-            'Google Satellite'
+            'Tiles &copy; Esri'
     }
 );
 
 
 // Basemap default
-googleSatellite.addTo(map);
+esriSatellite.addTo(map);
 
 
 // ======================================================
@@ -76,8 +69,8 @@ googleSatellite.addTo(map);
 
 const baseMaps = {
 
-    "Google Satellite":
-        googleSatellite,
+    "Esri World Imagery":
+        esriSatellite,
 
     "Carto Light":
         cartoLight,
